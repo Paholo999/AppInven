@@ -17,7 +17,7 @@ namespace AppInven.Modelo.dao
 
         public Conexion()
         {
-            cn = new SqlConnection("Server=DESKTOP-UFN58GD;Database=Inventario1;Trusted_Connection=True;");
+            cn = new SqlConnection("Server=PABLO\\SQLEXPRESS;Database=Inventario1;Trusted_Connection=True;");
         }
 
         public void Abrir_cn()
@@ -29,7 +29,7 @@ namespace AppInven.Modelo.dao
             }
             catch (Exception e)
             {
-                throw e;
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -42,7 +42,7 @@ namespace AppInven.Modelo.dao
             }
             catch (Exception e)
             {
-                throw (e);
+                MessageBox.Show(e.Message);
             }
         }
 
